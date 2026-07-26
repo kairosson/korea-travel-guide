@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block title %}Gangneung 2D1N Itinerary — Gangneung & Sokcho Guide{% endblock %}
+
+{% block content %}
+<section class="band" style="padding-top:64px;">
+  <div class="wrap">
+    <span class="eyebrow">Course · 2 Days, 1 Night</span>
+    <h1>Gangneung, properly</h1>
+    <p class="lead">One night turns Gangneung from a photo stop into an actual visit. This route gives the scholar's house, the lake, the coffee street, and the fish market their own time slots instead of stacking all four into an afternoon.</p>
+
+    <h2 style="margin-top:56px;">Day 1</h2>
+    <div class="timeline">
+      <div class="stop">
+        <span class="stop-time">Morning</span>
+        <h3>Arrive by KTX</h3>
+        <p>Drop your bag at your accommodation if check-in allows, or store it at the station lockers.</p>
+      </div>
+      <div class="stop">
+        <span class="stop-time">Midday</span>
+        <h3>Ojukheon & Gangneung Municipal Museum</h3>
+        <p>The museum next door adds context you won't get from the house alone — regional history, not just the Yi family.</p>
+      </div>
+      <div class="stop">
+        <span class="stop-time">Afternoon</span>
+        <h3>Gyeongpo Lake loop</h3>
+        <p>Bike rental stalls circle the lake. The full loop takes about an hour at an easy pace, with pavilions to stop at along the way.</p>
+      </div>
+      <div class="stop">
+        <span class="stop-time">Evening</span>
+        <h3>Jungang Market dinner</h3>
+        <p>Gangneung's main traditional market — try dak-gangjeong (sweet-spicy fried chicken) or fresh seafood stalls.</p>
+      </div>
+    </div>
+
+    <h2 style="margin-top:56px;">Day 2</h2>
+    <div class="timeline">
+      <div class="stop">
+        <span class="stop-time">Morning</span>
+        <h3>Anmok Beach & Coffee Street, unhurried</h3>
+        <p>Go before 10am if you want a table by the window without a wait. Walk the beach afterward — this is where the espresso-and-ocean photo everyone posts actually comes from.</p>
+      </div>
+      <div class="stop">
+        <span class="stop-time">Late morning</span>
+        <h3>Gyeongpodae Pavilion</h3>
+        <p>A Joseon-era pavilion on a hill above the lake, built for viewing the moon reflected five times — in the sky, the sea, the lake, a wine cup, and a lover's eyes, according to the old saying.</p>
+      </div>
+      <div class="stop">
+        <span class="stop-time">Afternoon</span>
+        <h3>KTX back to Seoul</h3>
+        <p>Leave enough buffer to get back to the station — traffic near Gyeongpo can be heavier on weekends.</p>
+      </div>
+    </div>
+  </div>
+</section>
+{{ m.ridge_divider() }}
+<section class="band alt">
+  <div class="wrap">
+    <h2>Continue to Sokcho</h2>
+    <p class="lead">If your trip has a third day, Sokcho is under an hour from Gangneung and adds the mountain and a completely different kind of history. See the <a href="{{ url_for('full_3d2n') }}">3-day route</a>.</p>
+  </div>
+</section>
+{% endblock %}

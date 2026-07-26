@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block title %}Ojukheon Explained — Gangneung & Sokcho Guide{% endblock %}
+
+{% block content %}
+<section class="band" style="padding-top:64px;">
+  <div class="wrap">
+    <span class="eyebrow">Culture · Gangneung</span>
+    <h1>Ojukheon: the house behind two banknotes</h1>
+    <p class="lead">If you've handled Korean currency, you've already met this family. Shin Saimdang is on the 50,000-won note; her son Yi I, known by his pen name Yulgok, is on the 5,000-won note. Both were born in this house.</p>
+
+    <h2 style="margin-top:48px;">Who they were</h2>
+    <p>Shin Saimdang (1504–1551) was a painter, calligrapher, and poet at a time when women's artistic work in Joseon Korea was rarely preserved or credited. Her paintings of plants, insects, and grapes are still studied as some of the finest botanical art of the period. She's also held up in Korea as a model of the capable, disciplined mother — a framing that's been debated in recent decades as much as celebrated, since it can flatten a genuinely accomplished artist into a symbol of domestic virtue.</p>
+    <p>Her son, Yi I (1536–1584), became one of the two most influential scholars in Korean Confucian philosophy, alongside Yi Hwang (Toegye), who appears on the 1,000-won note. Yulgok's ideas on statecraft, education, and social reform shaped Joseon-dynasty policy debates for generations after his death.</p>
+
+    <h2 style="margin-top:48px;">The house itself</h2>
+    <p>Ojukheon means "House of the Black Bamboo," named for the dark-stemmed bamboo still growing on the grounds. The house is one of the oldest surviving wooden residential buildings in Korea, and the room where Yi I was born — Mongryongsil — is preserved and marked. The complex has grown to include a museum with period artifacts, replicas of Shin Saimdang's paintings, and exhibits on both figures' lives.</p>
+
+    <h2 style="margin-top:48px;">Why it's easy to rush and shouldn't be</h2>
+    <p>Ojukheon gets visited as a 30-minute stop between the KTX station and the beach, which is enough time to see the buildings but not to understand why this particular family became this central to how Korea thinks about itself — as scholars, as an artist mother, as currency-worthy symbols of a certain kind of Confucian ideal. Reading the museum placards, not just walking past the house, is where that context actually lands.</p>
+
+    <div class="byline-note">
+      Getting there: a short taxi or local bus ride from Gangneung Station, easily combined with Gyeongpo Lake since both are on the same side of the city.
+    </div>
+  </div>
+</section>
+{{ m.ridge_divider() }}
+<section class="band alt">
+  <div class="wrap">
+    <h2>Fit it into a trip</h2>
+    <p class="lead">Ojukheon is the first stop on both the <a href="{{ url_for('day_trip') }}">day trip</a> and the <a href="{{ url_for('gangneung_2d1n') }}">Gangneung 2D1N itinerary</a>.</p>
+  </div>
+</section>
+{% endblock %}

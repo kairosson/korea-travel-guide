@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block title %}Seoraksan Guide by Time & Difficulty — Gangneung & Sokcho Guide{% endblock %}
+
+{% block content %}
+<section class="band" style="padding-top:64px;">
+  <div class="wrap">
+    <span class="eyebrow">Nature · Sokcho</span>
+    <h1>Seoraksan, sorted by how much time and effort you have</h1>
+    <p class="lead">Seoraksan National Park is Korea's third-highest mountain range and its most dramatic, with granite peaks that turn the whole park red and gold in autumn foliage season. It also has routes for almost anyone, from a 30-minute cable car ride to a full-day summit push. Match the route to your day, not the other way around.</p>
+
+    <div class="grid" style="margin-top:40px;">
+      <div class="card">
+        <span class="tag">~1 hour</span>
+        <h3>Cable car to Gwongeumseong</h3>
+        <p>A cable car near the park's Sogongwon entrance climbs to a ridge near the site of a former fortress, with a short walk up to a viewpoint over the park and coast. The easiest way to get a genuine Seoraksan view without hiking. Lines can be long on weekends and in peak foliage weeks — go early.</p>
+      </div>
+      <div class="card">
+        <span class="tag">2–3 hours</span>
+        <h3>Biseondae Trail</h3>
+        <p>A mostly flat, well-paved trail along a valley to Biseondae Rock, passing waterfalls and pools. Manageable for most fitness levels and doesn't require hiking gear.</p>
+      </div>
+      <div class="card">
+        <span class="tag">4–6 hours</span>
+        <h3>Ulsanbawi Trail</h3>
+        <p>A steeper round trip to a distinctive multi-peaked granite formation, with a long staircase section near the top. Real elevation gain — proper shoes and an early start matter here.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Full day</span>
+        <h3>Daecheongbong summit</h3>
+        <p>The park's highest peak. A serious full-day hike (or overnight with a shelter reservation) for experienced hikers only — this is not a casual add-on to a coastal trip.</p>
+      </div>
+    </div>
+
+    <div class="byline-note">
+      Before you go: trail access changes seasonally (some routes close in winter or during dry-season fire-risk periods), and the national park office publishes current conditions and shelter reservation info — worth checking the week of your visit rather than assuming a route is open.
+    </div>
+  </div>
+</section>
+{{ m.ridge_divider() }}
+<section class="band alt">
+  <div class="wrap">
+    <h2>Fit it into a trip</h2>
+    <p class="lead">Seoraksan anchors Day 1 of the <a href="{{ url_for('sokcho_2d1n') }}">Sokcho 2D1N itinerary</a>.</p>
+  </div>
+</section>
+{% endblock %}

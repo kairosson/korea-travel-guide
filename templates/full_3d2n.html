@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block title %}Gangneung + Sokcho 3D2N Itinerary — Gangneung & Sokcho Guide{% endblock %}
+
+{% block content %}
+<section class="band" style="padding-top:64px;">
+  <div class="wrap">
+    <span class="eyebrow">Course · 3 Days, 2 Nights</span>
+    <h1>Both cities, unrushed</h1>
+    <p class="lead">This is the version that lets the region make its own case: a scholar's house, a lake, a coffee street, a mountain, and a refugee village, spread out enough that none of it feels like a checklist.</p>
+
+    <table class="compare">
+      <tr><th>Day</th><th>Focus</th><th>Key stops</th></tr>
+      <tr>
+        <td>1</td>
+        <td>Gangneung — history & lake</td>
+        <td>Ojukheon, Gyeongpo Lake, Gyeongpodae Pavilion</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Gangneung → Sokcho — coast & mountain</td>
+        <td>Anmok Coffee Street (morning), transfer to Sokcho, Seoraksan (afternoon)</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Sokcho — village & market</td>
+        <td>Abai Village, gaetbae ferry, Sokcho Jungang Market, Daepo Port</td>
+      </tr>
+    </table>
+
+    <div class="byline-note">
+      Getting between Gangneung and Sokcho: intercity buses run roughly every 20–40 minutes and take about 50–70 minutes. There's no direct train between the two cities.
+    </div>
+
+    <p class="lead" style="margin-top:40px;">For stop-by-stop detail on each day, see the <a href="{{ url_for('gangneung_2d1n') }}">Gangneung itinerary</a> and <a href="{{ url_for('sokcho_2d1n') }}">Sokcho itinerary</a> — this route is those two, connected.</p>
+  </div>
+</section>
+{% endblock %}

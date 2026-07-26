@@ -1,0 +1,6 @@
+{% macro ridge_divider(flip=False) %}
+<svg class="ridge-divider {% if flip %}ridge-flip{% endif %}" viewBox="0 0 1200 96" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <path class="tide" d="M0,70 L1200,70 L1200,96 L0,96 Z"></path>
+  <path class="ridge" d="M0,70 L90,42 L150,58 L230,20 L300,50 L380,30 L460,55 L540,15 L620,48 L700,32 L790,54 L870,25 L960,50 L1040,38 L1120,58 L1200,44 L1200,70 Z"></path>
+</svg>
+{% endmacro %}

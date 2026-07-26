@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block title %}Sokcho & Seoraksan 2D1N Itinerary — Gangneung & Sokcho Guide{% endblock %}
+
+{% block content %}
+<section class="band" style="padding-top:64px;">
+  <div class="wrap">
+    <span class="eyebrow">Course · 2 Days, 1 Night</span>
+    <h1>Sokcho & Seoraksan</h1>
+    <p class="lead">Mountain in daylight, history and seafood after dark. Sokcho sits right where Seoraksan National Park meets the sea, which is part of why the city feels different from anywhere else on this coast.</p>
+
+    <h2 style="margin-top:56px;">Day 1 — Seoraksan</h2>
+    <div class="timeline">
+      <div class="stop">
+        <span class="stop-time">Morning</span>
+        <h3>Arrive & head straight for the park</h3>
+        <p>Seoraksan gets crowded from mid-morning, especially in autumn foliage season — go early.</p>
+      </div>
+      <div class="stop">
+        <span class="stop-time">Midday</span>
+        <h3>Cable car to Gwongeumseong, or a real trail</h3>
+        <p>Short on time or mobility: the cable car up to Gwongeumseong fortress site gives you the granite-peak view in about 30 minutes round trip. Have a full day: the Biseondae or Ulsanbawi trails are longer, steeper, and genuinely rewarding — check current trail conditions before you commit.</p>
+      </div>
+      <div class="stop">
+        <span class="stop-time">Afternoon</span>
+        <h3>Sinheungsa Temple</h3>
+        <p>Near the park entrance — a working temple with a large bronze Buddha statue outside, easy to fit in on the way out.</p>
+      </div>
+      <div class="stop">
+        <span class="stop-time">Evening</span>
+        <h3>Check in, rest your legs</h3>
+        <p>Save Abai Village for tomorrow — you'll want daylight for the neighborhood, and evening energy for the fish market instead.</p>
+      </div>
+    </div>
+
+    <h2 style="margin-top:56px;">Day 2 — Sea & history</h2>
+    <div class="timeline">
+      <div class="stop">
+        <span class="stop-time">Morning</span>
+        <h3>Abai Village</h3>
+        <p>Cross by the hand-pulled ferry (gaetbae) — a small wooden boat pulled across the channel by rope, still the neighborhood's actual way of getting around, not a tourist gimmick. See the <a href="{{ url_for('abai_village') }}">full history</a> before you go.</p>
+      </div>
+      <div class="stop">
+        <span class="stop-time">Midday</span>
+        <h3>Lunch in the village</h3>
+        <p>Abai sundae (a Hamgyong-style blood sausage, different from the Seoul version) and squid sundae are the neighborhood's signature dishes.</p>
+      </div>
+      <div class="stop">
+        <span class="stop-time">Afternoon</span>
+        <h3>Sokcho Jungang Market & Daepo Port</h3>
+        <p>Fresh and dried seafood stalls, street food, and a working fishing port — go hungry.</p>
+      </div>
+      <div class="stop">
+        <span class="stop-time">Evening</span>
+        <h3>Depart</h3>
+        <p>Buses to Seoul run from Sokcho's intercity terminal; there's no KTX station in Sokcho itself, so plan the bus timing in advance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+{{ m.ridge_divider() }}
+<section class="band alt">
+  <div class="wrap">
+    <h2>Combine with Gangneung</h2>
+    <p class="lead">Sokcho and Gangneung are under an hour apart. See the <a href="{{ url_for('full_3d2n') }}">3-day route</a> to do both properly.</p>
+  </div>
+</section>
+{% endblock %}

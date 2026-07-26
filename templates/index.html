@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block title %}Gangneung & Sokcho — A Traveler's Guide Beyond Seoul{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-kicker">Gangneung · Sokcho — Gangwon Coast</div>
+    <h1>Where the ridge meets the tide.</h1>
+    <p class="hero-lede">Two hours from Seoul by train, this stretch of Korea's east coast holds a 500-year-old scholar's home, a fishing village built by war refugees, and a mountain range that turns the sky red at sunrise. Most guides show you the coffee street. This one shows you why the coast looks the way it does.</p>
+    <div style="margin-top:32px; display:flex; gap:14px;">
+      <a href="{{ url_for('day_trip') }}" class="btn">Plan a day trip</a>
+      <a href="{{ url_for('abai_village') }}" class="btn-ghost">Start with the history</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><b>~2h 10m</b><span>KTX from Seoul</span></div>
+      <div class="hero-stat"><b>2</b><span>Cities, one line</span></div>
+      <div class="hero-stat"><b>1953</b><span>Year Abai Village began</span></div>
+    </div>
+  </div>
+</section>
+
+{{ m.ridge_divider() }}
+
+<section class="band">
+  <div class="wrap">
+    <span class="eyebrow">Why here</span>
+    <h2>Everyone posts the coffee street.<br>Almost no one explains the village behind it.</h2>
+    <p class="lead">Gangneung and Sokcho get treated as one long Instagram backdrop — Anmok Beach cafés, Sokcho abalone porridge, a cable car photo. All real, all worth doing. But both cities carry stories that don't show up in a five-photo carousel: a Joseon-dynasty household that produced Korea's most famous scholar and the banknote portrait next to him, and a lagoon-side neighborhood built by people who fled the Korean War expecting to go home in a few months and never could. This guide treats those stories as part of the itinerary, not a museum plaque you skip.</p>
+
+    <div class="grid">
+      <div class="card">
+        <span class="tag">Sea</span>
+        <h3>Gyeongpo & the coast</h3>
+        <p>Lagoon, beach, and a coastline built for slow mornings — plus the coffee culture that made Gangneung famous.</p>
+        <a class="card-link" href="{{ url_for('gangneung_2d1n') }}">Gangneung itinerary →</a>
+      </div>
+      <div class="card">
+        <span class="tag">Mountain</span>
+        <h3>Seoraksan</h3>
+        <p>Cable car routes for a two-hour visit, real trails for a full day. Granite peaks that turn the coast dramatic.</p>
+        <a class="card-link" href="{{ url_for('seoraksan') }}">Seoraksan guide →</a>
+      </div>
+      <div class="card">
+        <span class="tag">History</span>
+        <h3>Ojukheon & Abai Village</h3>
+        <p>A 500-year-old scholar's house and a 1950s refugee village — two very different Koreas, twenty minutes apart from their respective city centers.</p>
+        <a class="card-link" href="{{ url_for('ojukheon') }}">Ojukheon →</a> · <a class="card-link" href="{{ url_for('abai_village') }}">Abai Village →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ m.ridge_divider(flip=True) }}
+
+<section class="band dark">
+  <div class="wrap">
+    <span class="eyebrow">Start planning</span>
+    <h2>Pick your version of the trip</h2>
+    <div class="grid">
+      <div class="card" style="background:rgba(251,248,241,0.06); border-color:rgba(243,236,221,0.18);">
+        <span class="tag" style="color:#f3ecdd; border-color:#f3ecdd;">Day trip</span>
+        <h3 style="color:#fff;">One day, from Seoul</h3>
+        <p style="color:rgba(243,236,221,0.75);">KTX in, a tight Gangneung loop, KTX out. For people who can't spare a night.</p>
+        <a class="card-link" href="{{ url_for('day_trip') }}">See the schedule →</a>
+      </div>
+      <div class="card" style="background:rgba(251,248,241,0.06); border-color:rgba(243,236,221,0.18);">
+        <span class="tag" style="color:#f3ecdd; border-color:#f3ecdd;">2D1N</span>
+        <h3 style="color:#fff;">Gangneung, properly</h3>
+        <p style="color:rgba(243,236,221,0.75);">Ojukheon, Gyeongpo, the coffee street, and a slow second morning.</p>
+        <a class="card-link" href="{{ url_for('gangneung_2d1n') }}">See the itinerary →</a>
+      </div>
+      <div class="card" style="background:rgba(251,248,241,0.06); border-color:rgba(243,236,221,0.18);">
+        <span class="tag" style="color:#f3ecdd; border-color:#f3ecdd;">2D1N</span>
+        <h3 style="color:#fff;">Sokcho & Seoraksan</h3>
+        <p style="color:rgba(243,236,221,0.75);">Mountain by day, Abai Village and the fish market by evening.</p>
+        <a class="card-link" href="{{ url_for('sokcho_2d1n') }}">See the itinerary →</a>
+      </div>
+      <div class="card" style="background:rgba(251,248,241,0.06); border-color:rgba(243,236,221,0.18);">
+        <span class="tag" style="color:#f3ecdd; border-color:#f3ecdd;">3D2N</span>
+        <h3 style="color:#fff;">Both cities, unrushed</h3>
+        <p style="color:rgba(243,236,221,0.75);">The full arc — history, mountain, sea, and enough downtime to feel like a trip and not a checklist.</p>
+        <a class="card-link" href="{{ url_for('full_3d2n') }}">See the itinerary →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

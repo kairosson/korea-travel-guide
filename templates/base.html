@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}Gangneung & Sokcho — A Traveler's Guide{% endblock %}</title>
+<meta name="description" content="{% block description %}An independent guide to Gangneung and Sokcho for travelers who want the mountain, the sea, and the history behind both — no tour group required.{% endblock %}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="{{ url_for('index') }}" class="brand">ridge<span>&</span>tide</a>
+    <ul class="nav-links">
+      <li><a href="{{ url_for('day_trip') }}">Day Trip</a></li>
+      <li><a href="{{ url_for('gangneung_2d1n') }}">Gangneung</a></li>
+      <li><a href="{{ url_for('sokcho_2d1n') }}">Sokcho</a></li>
+      <li><a href="{{ url_for('full_3d2n') }}">3 Days</a></li>
+      <li><a href="{{ url_for('food_guide') }}">Food</a></li>
+      <li><a href="{{ url_for('stories') }}">Traveler Stories</a></li>
+    </ul>
+  </div>
+</nav>
+
+{% block content %}{% endblock %}
+
+<footer>
+  <div class="wrap">
+    <div>
+      <strong style="color:#fff; font-family: var(--font-display); font-size:1.05rem;">ridge & tide</strong>
+      <p style="margin-top:8px; max-width:34ch;">An independent, ad-free-of-clutter guide to Gangneung and Sokcho — built one neighborhood at a time.</p>
+    </div>
+    <div>
+      <p><a href="{{ url_for('stories') }}">Share your own trip →</a></p>
+      <p class="small-note">Built as a content pilot for a wider Korea travel guide project.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

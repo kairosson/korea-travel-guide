@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block title %}Seoul to Gangneung Day Trip — Gangneung & Sokcho Guide{% endblock %}
+
+{% block content %}
+<section class="band" style="padding-top:64px;">
+  <div class="wrap">
+    <span class="eyebrow">Course · Day Trip</span>
+    <h1>Gangneung in one day, from Seoul</h1>
+    <p class="lead">The KTX-Gangneung line (opened for the 2018 Winter Olympics) makes this genuinely doable without a night away — you're looking at roughly two hours each way from Seoul Station or Cheongnyangni. This route keeps history, coast, and coffee in one loop without feeling rushed.</p>
+
+    <div class="timeline">
+      <div class="stop">
+        <span class="stop-time">Morning · KTX</span>
+        <h3>Seoul → Gangneung</h3>
+        <p>Take an early KTX from Seoul Station or Cheongnyangni Station. The ride itself is worth the window seat once the train clears the mountains near Pyeongchang.</p>
+      </div>
+      <div class="stop">
+        <span class="stop-time">Late morning</span>
+        <h3>Ojukheon</h3>
+        <p>A 15–20 minute taxi or bus from Gangneung Station. This is the birthplace of Yi I (Yulgok), one of Korea's two most influential Confucian scholars, and his mother Shin Saimdang, a painter and calligrapher whose portrait is on the 50,000-won note. Budget 45–60 minutes to walk the wooden house and grounds.</p>
+      </div>
+      <div class="stop">
+        <span class="stop-time">Midday</span>
+        <h3>Lunch near Gyeongpo</h3>
+        <p>Head toward Gyeongpo for a bowl of makguksu (buckwheat noodles) or fresh seafood. See the <a href="{{ url_for('food_guide') }}">food guide</a> for specific recommendations by neighborhood.</p>
+      </div>
+      <div class="stop">
+        <span class="stop-time">Early afternoon</span>
+        <h3>Gyeongpo Lake & Beach</h3>
+        <p>Rent a bike and ride the lake loop, or just walk the beach boardwalk. Gyeongpo is where locals actually go, not just tour buses.</p>
+      </div>
+      <div class="stop">
+        <span class="stop-time">Late afternoon</span>
+        <h3>Anmok Coffee Street</h3>
+        <p>Gangneung's café culture started here in the 1980s with a single roaster; now it's a full strip along the beach. Pick one place with an ocean-facing window rather than trying to hit five.</p>
+      </div>
+      <div class="stop">
+        <span class="stop-time">Evening · KTX</span>
+        <h3>Gangneung → Seoul</h3>
+        <p>Trains run until fairly late in the evening — check the current KTX timetable before you go, since schedules shift seasonally.</p>
+      </div>
+    </div>
+
+    <div class="byline-note">
+      Doing this without a car: everything above is reachable by city bus or taxi from Gangneung Station, but taxis are the easier call if you're short on time — fares between these stops are modest.
+    </div>
+  </div>
+</section>
+{{ m.ridge_divider() }}
+<section class="band alt">
+  <div class="wrap">
+    <h2>Want more than a day?</h2>
+    <p class="lead">This loop skips Sokcho and Seoraksan entirely. If you can spare a night, the <a href="{{ url_for('gangneung_2d1n') }}">Gangneung 2D1N</a> or full <a href="{{ url_for('full_3d2n') }}">3-day route</a> give the coast room to breathe.</p>
+  </div>
+</section>
+{% endblock %}

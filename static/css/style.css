@@ -1,0 +1,384 @@
+/* ============================================================
+   Gangneung · Sokcho — design tokens
+   Concept: the region's own arc — pine ridgeline down to open sea.
+   Signature element: the "ridge-to-tide" divider, a silhouette
+   that runs from mountain contour into a flat sea line. It stands
+   in for every section break instead of a plain hairline, because
+   the whole point of this coast is that you get both in one day.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+:root {
+  --ink: #16232b;         /* deep pine-shadow navy, primary text */
+  --coral: #e0602f;       /* Jeongdongjin dawn — accent, CTAs */
+  --pine: #33544a;        /* pine-forest teal — secondary */
+  --sand: #f3ecdd;        /* dry sand — page background */
+  --mist: #dfe8e4;        /* sea mist — panels */
+  --paper: #fbf8f1;       /* card surface, lighter than sand */
+  --line: rgba(22, 35, 43, 0.14);
+
+  --font-display: 'Fraunces', 'Noto Sans KR', serif;
+  --font-body: 'Inter', 'Noto Sans KR', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--sand);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: inherit; }
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.12;
+  margin: 0 0 0.4em;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 700; }
+h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
+h3 { font-size: 1.25rem; }
+
+p { margin: 0 0 1em; }
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--coral);
+  display: inline-block;
+  margin-bottom: 0.8em;
+}
+
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* ---------------- nav ---------------- */
+
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(243, 236, 221, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-nav .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.brand span { color: var(--coral); }
+
+.nav-links {
+  display: flex;
+  gap: 26px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--ink);
+  opacity: 0.72;
+  transition: opacity 0.15s ease;
+}
+
+.nav-links a:hover { opacity: 1; }
+
+/* ---------------- hero ---------------- */
+
+.hero {
+  position: relative;
+  padding: 96px 0 0;
+  overflow: hidden;
+  background: linear-gradient(180deg, #f6efe1 0%, var(--sand) 100%);
+}
+
+.hero .wrap { position: relative; z-index: 2; }
+
+.hero-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pine);
+  margin-bottom: 1.1em;
+}
+
+.hero h1 { max-width: 11ch; }
+
+.hero-lede {
+  max-width: 46ch;
+  font-size: 1.15rem;
+  color: rgba(22,35,43,0.8);
+  margin-top: 0.6em;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 36px;
+  margin-top: 40px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.hero-stat b {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+}
+
+.hero-stat span {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: rgba(22,35,43,0.6);
+  text-transform: uppercase;
+}
+
+/* ---------------- ridge-to-tide divider (signature element) ------- */
+
+.ridge-divider {
+  width: 100%;
+  height: 96px;
+  display: block;
+  margin: 0;
+}
+
+.ridge-divider path.ridge { fill: var(--pine); opacity: 0.9; }
+.ridge-divider path.tide { fill: var(--coral); opacity: 0.16; }
+
+.ridge-flip { transform: scaleY(-1); }
+
+section.band { padding: 76px 0; }
+section.band.alt { background: var(--mist); }
+section.band.dark { background: var(--ink); color: var(--sand); }
+section.band.dark .eyebrow { color: var(--coral); }
+
+/* ---------------- cards / grids ---------------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+  margin-top: 34px;
+}
+
+.card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 26px;
+}
+
+.card h3 { margin-bottom: 0.5em; }
+
+.card .tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--pine);
+  border: 1px solid var(--pine);
+  border-radius: 20px;
+  padding: 3px 10px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.card p { color: rgba(22,35,43,0.78); font-size: 0.96rem; }
+
+.card-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: var(--coral);
+  text-decoration: none;
+  font-weight: 500;
+}
+.card-link:hover { text-decoration: underline; }
+
+/* ---------------- itinerary timeline ---------------- */
+
+.timeline {
+  border-left: 2px solid var(--pine);
+  margin-top: 40px;
+  padding-left: 28px;
+}
+
+.stop {
+  position: relative;
+  padding-bottom: 34px;
+}
+
+.stop:last-child { padding-bottom: 0; }
+
+.stop::before {
+  content: '';
+  position: absolute;
+  left: -34px;
+  top: 4px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--coral);
+  border: 2px solid var(--sand);
+}
+
+.stop-time {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  color: var(--coral);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.stop h3 { margin-bottom: 0.3em; }
+.stop p { color: rgba(22,35,43,0.8); }
+
+/* ---------------- buttons ---------------- */
+
+.btn {
+  display: inline-block;
+  background: var(--coral);
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 3px;
+  font-weight: 500;
+  font-size: 0.92rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(224,96,47,0.28); }
+
+.btn-ghost {
+  display: inline-block;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  text-decoration: none;
+  padding: 11px 23px;
+  border-radius: 3px;
+  font-size: 0.92rem;
+}
+
+/* ---------------- pull quote / story card ---------------- */
+
+.story {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--coral);
+  padding: 28px 30px;
+  margin-top: 26px;
+  border-radius: 2px;
+}
+
+.story-meta {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--pine);
+  margin-bottom: 10px;
+}
+
+.story blockquote {
+  margin: 0 0 14px;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* ---------------- table (food comparisons) ---------------- */
+
+table.compare {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  font-size: 0.95rem;
+}
+
+table.compare th, table.compare td {
+  text-align: left;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+table.compare th {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--pine);
+}
+
+/* ---------------- footer ---------------- */
+
+footer {
+  background: var(--ink);
+  color: rgba(243,236,221,0.75);
+  padding: 48px 0 32px;
+  font-size: 0.88rem;
+}
+
+footer a { color: var(--sand); text-decoration: none; }
+footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+
+/* ---------------- misc ---------------- */
+
+.lead { font-size: 1.08rem; color: rgba(22,35,43,0.82); max-width: 62ch; }
+.small-note {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: rgba(22,35,43,0.55);
+  margin-top: 10px;
+}
+
+.byline-note {
+  border: 1px dashed var(--line);
+  padding: 18px 20px;
+  border-radius: 4px;
+  font-size: 0.92rem;
+  color: rgba(22,35,43,0.75);
+  margin-top: 40px;
+}
+
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+  section.band { padding: 52px 0; }
+}
