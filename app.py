@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+import os
 
 app = Flask(__name__)
 
@@ -53,5 +54,34 @@ def stories():
     return render_template("stories.html")
 
 
+# ---- Busan (second region) ----
+
+@app.route("/busan")
+def busan_index():
+    return render_template("busan/busan_index.html")
+
+
+@app.route("/busan/day-trip")
+def busan_day_trip():
+    return render_template("busan/busan_day_trip.html")
+
+
+@app.route("/busan/2d1n")
+def busan_2d1n():
+    return render_template("busan/busan_2d1n.html")
+
+
+@app.route("/busan/culture")
+def busan_culture():
+    return render_template("busan/busan_culture.html")
+
+
+@app.route("/busan/food")
+def busan_food():
+    return render_template("busan/busan_food.html")
+
+
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    port = int(os.environ.get("PORT", 5000))
+    debug_mode = os.environ.get("FLASK_DEBUG", "false").lower() == "true"
+    app.run(host="0.0.0.0", port=port, debug=debug_mode)
